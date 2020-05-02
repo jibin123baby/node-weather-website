@@ -67,6 +67,7 @@ app.get('/weather',(req,res)=>{
                     res.send({
                         address: address,
                         location: placeName,
+                        humidity: forecastData.humidity,
                         forecast: forecastData.weather_descriptions + ". Temperature is " + forecastData.temperature +". But it feels like "+forecastData.feelslike
                     });
                 }
